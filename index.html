@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   NC High Country Trip — Activity &amp; Dining Guide
+  </title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&amp;family=Josefin+Sans:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+   :root {
+    --forest: #2C3E2D; --pine: #3D5A3E; --sage: #7A9E7E; --mist: #B8C9B0;
+    --cream: #F5F0E8; --parchment: #EDE5D0; --gold: #C49A22; --amber: #E8B84B;
+    --rust: #8B3A1A; --plum: #4A2545; --ink: #1C1C1C; --warm-gray: #6B6460;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--cream); color: var(--ink); font-family: 'Source Serif 4', Georgia, serif; font-weight: 300; line-height: 1.7; }
+
+  html { scroll-behavior: smooth; }
+  main.page-content { display: block; }
+  .entry-link { color: inherit; text-decoration: none; }
+  .entry-link:hover { text-decoration: underline; text-decoration-color: var(--amber); }
+  .map-link.is-placeholder { opacity: 0.35; }
+  .map-link.is-placeholder:hover { opacity: 0.55; }
+  .map-link { display: none !important; }
+  .site-header { background: var(--forest); color: var(--cream); padding: 3.5rem 2rem 1.25rem; text-align: center; position: relative; overflow: hidden; }
+  .site-header::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px); }
+  .header-eyebrow { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 0.75rem; }
+  .header-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; line-height: 1.15; color: var(--cream); position: relative; }
+  .header-title em { font-style: italic; color: var(--amber); }
+  .header-sub { margin-top: 1rem; font-size: 1rem; color: var(--mist); font-weight: 300; letter-spacing: 0.02em; }
+  .header-dates { display: inline-block; margin-top: 0.75rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); padding: 0.4rem 1.2rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--amber); border-radius: 2px; }
+  .legend { background: var(--parchment); border-top: 3px solid var(--forest); padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start; }
+  .legend-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--warm-gray); width: 100%; margin-bottom: 0.25rem; }
+  .legend-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--ink); }
+  .tag { display: inline-block; border-radius: 2px; padding: 0.15rem 0.5rem; font-size: 0.65rem; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.1em; font-weight: 600; text-transform: uppercase; white-space: nowrap; }
+  .tag-bookasap { background: var(--rust); color: white; }
+  .tag-free { background: var(--pine); color: white; }
+  .tag-adult { background: var(--plum); color: white; }
+  .tag-family { background: var(--sage); color: white; }
+  .tag-mobility { background: #5B7FA6; color: white; }
+  .tag-geology { background: #7B5E3A; color: white; }
+  .tag-theater { background: #6B3A5B; color: white; }
+  .tag-privateroom { background: #2A5F8F; color: white; }
+  .tag-anniversary { background: var(--gold); color: white; }
+  .price-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; color: var(--pine); background: #EAF0E5; border: 1px solid var(--sage); border-radius: 2px; padding: 0.15rem 0.5rem; white-space: nowrap; }
+  .zone-nav { background: var(--forest); padding: 0.75rem 2rem; display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; position: sticky; top: 0; z-index: 100; }
+  .zone-nav a { color: var(--mist); text-decoration: none; font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.75rem; border: 1px solid rgba(255,255,255,0.15); border-radius: 2px; transition: all 0.2s; }
+  .zone-nav a:hover { background: rgba(255,255,255,0.1); color: var(--amber); }
+  .container { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+  .zone { margin: 3rem 0 0; }
+  .zone-header { background: var(--forest); color: var(--cream); padding: 1.25rem 2rem; display: flex; align-items: flex-start; gap: 1rem; flex-wrap: nowrap; }
+  .zone-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 400; font-style: italic; color: var(--amber); line-height: 1; flex-shrink: 0; padding-top: 0.1rem; }
+  .zone-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; letter-spacing: 0.01em; }
+  .zone-note { font-size: 0.82rem; color: var(--mist); font-style: italic; }
+  .entries { background: white; }
+  .entry { border-bottom: 1px solid #E8E0D0; padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: flex-start; }
+  .entry:last-child { border-bottom: none; }
+  .entry-left { min-width: 0; flex: 1 1 200px; overflow-wrap: break-word; word-break: break-word; }
+  .entry-name-row { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.3rem; }
+  .entry-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--forest); }
+  .entry-type { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-gray); border-left: 2px solid var(--amber); padding-left: 0.5rem; }
+  .entry-desc { font-size: 0.9rem; color: #444; margin-bottom: 0.5rem; line-height: 1.6; }
+  .person-tag { font-family: 'Josefin Sans', sans-serif; font-size: 0.6rem; letter-spacing: 0.08em; border: 1px solid var(--mist); border-radius: 2px; padding: 0.1rem 0.4rem; color: var(--warm-gray); text-transform: uppercase; }
+  .entry-hours { font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.05em; color: var(--warm-gray); text-align: right; white-space: nowrap; padding-top: 0.25rem; min-width: 130px; max-width: 160px; flex-shrink: 0; }
+  .entry-hours strong { display: block; color: var(--pine); font-weight: 600; }
+  .hours-warning { color: var(--rust); font-size: 0.65rem; font-style: italic; display: block; }
+  .note-callout { background: #FFF8EC; border-left: 3px solid var(--amber); padding: 0.5rem 0.75rem; font-size: 0.82rem; color: #555; margin-top: 0.5rem; font-style: italic; }
+  .note-callout.soy { background: #FFF0F0; border-left-color: var(--rust); }
+  .special-section { margin: 3rem 0 0; }
+  .special-header { background: var(--plum); color: var(--cream); padding: 1.25rem 2rem; display: flex; align-items: flex-start; gap: 1rem; flex-wrap: nowrap; }
+  .special-header .zone-number { color: var(--amber); }
+  .special-header > div:not(.zone-number), .dining-header > div:not(.zone-number) { display: flex; flex-direction: column; align-items: flex-start; }
+  .dining-section { margin: 3rem 0 0; }
+  .dining-header { background: var(--rust); color: var(--cream); padding: 1.25rem 2rem; display: flex; align-items: flex-start; gap: 1rem; flex-wrap: nowrap; }
+  .dining-header .zone-number { color: var(--amber); }
+  .dining-header .zone-name { color: var(--cream); font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; }
+  .dining-header .zone-note { color: rgba(255,255,255,0.75); font-size: 0.82rem; font-style: italic; margin-top: 0.25rem; }
+  .water-section { margin: 3rem 0 0; }
+  .water-header { background: #2A5F8F; color: var(--cream); padding: 1.25rem 2rem; display: flex; align-items: flex-start; gap: 1rem; }
+  .water-header .zone-number { color: var(--amber); }
+  .fine-dining-box { background: #F0F4F8; border-top: 3px solid #2A5F8F; border-bottom: 1px solid #ddd; padding: 1.25rem 2rem; font-size: 0.88rem; line-height: 1.65; }
+  .fine-dining-title { font-family: 'Josefin Sans', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #2A5F8F; font-weight: 600; margin-bottom: 0.5rem; }
+  .price-legend { background: #F5F5F0; border: 1px solid #DDD; padding: 0.75rem 2rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; color: var(--warm-gray); display: flex; flex-wrap: wrap; gap: 1.5rem; }
+  .dining-area-header { background: var(--parchment); border-top: 2px solid var(--sage); border-bottom: 1px solid #ddd; padding: 0.6rem 2rem; font-family: 'Josefin Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--forest); }
+  .anniversary-box { margin: 3rem 0; border: 2px solid var(--gold); background: white; }
+  .anniversary-box-header { background: var(--gold); color: white; padding: 0.75rem 2rem; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; font-style: italic; }
+  .anniversary-box-body { padding: 1.5rem 2rem; font-size: 0.9rem; line-height: 1.7; }
+  .anniversary-box-body p { margin-bottom: 0.75rem; }
+  .anniversary-box-body p:last-child { margin-bottom: 0; }
+  footer { background: var(--forest); color: var(--mist); text-align: center; padding: 2rem; margin-top: 4rem; font-size: 0.8rem; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.05em; }
+  .map-link { display: inline-flex; align-items: center; margin-left: 0.4rem; color: var(--warm-gray); text-decoration: none; opacity: 0.55; transition: opacity 0.2s; vertical-align: middle; }
+  .map-link:hover { opacity: 1; color: var(--pine); }
+  .map-link svg { width: 20px; height: 20px; fill: currentColor; }
+
+  .entry-logistics { white-space: normal; }
+  .entry-logistics .logistics-block { display: block; margin-top: 0.35rem; }
+  .entry-logistics .logistics-block:first-child { margin-top: 0; }
+  .entry-logistics .logistics-label { display: block; color: var(--pine); font-weight: 700; }
+  .entry-logistics .logistics-value { display: block; }
+  .entry-phone a { color: inherit; text-decoration: none; }
+  .entry-phone a:hover { text-decoration: underline; }
+  
+  .authoring-tools { display: none; }
+  .entry[id] { scroll-margin-top: 4.5rem; }
+  .entries { counter-reset: entrycount; }
+  .entries > .entry { counter-increment: entrycount; }
+
+  @media (max-width: 640px) { .entry { flex-direction: column; } .entry-hours { text-align: left; max-width: none; min-width: 0; } .zone-nav { display: none; } }
+  @media print { .zone-nav { display: none; } .entry { break-inside: avoid; } }
+  
+
+  .entries[data-render-mode="json"] { background: white; }
+  .entry-shell-comment { display: none; }
+  .entry-schema-note { display: none; }
+</style>
+</head>
+<body data-version="v6-llm-data-driven-nav-phone-additions">
+<svg aria-hidden="true" focusable="false" id="icon-sprite" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="icon-map-pin" viewbox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</symbol>
+</svg>
+<header class="site-header">
+<div class="header-eyebrow">
+    Family Trip Planning Guide
+   </div>
+<h1 class="header-title">
+    NC High Country
+    <br/>
+<em>
+     Activity &amp; Dining Compendium
+    </em>
+</h1>
+<p class="header-sub">
+    Boone · Blowing Rock · Banner Elk · Valle Crucis · Todd · Linville · Spruce Pine
+   </p>
+<div class="header-dates">
+    July 5–12, 2026  ·  Highland Games Week
+   </div>
+</header>
+<!--LLM AUTHORING GUIDE
+- All entry lists are now data-driven. Edit only the JSON blocks that immediately follow each .entries container.
+- Do not hand-edit rendered entry markup unless fixing layout code.
+- One JSON object = one entry card.
+- Required fields in every entry object:
+  slug, name, url, type, description, hoursLabel, hoursText
+- Standard optional fields:
+  tags [{label, class}], price, note, noteClass, hoursWarning, phone
+- Map fields:
+  mapCoords, mapQuery, mapUrl, mapPlaceholder
+- Preferred map setup:
+  use mapCoords when known, else mapQuery, else mapUrl as fallback
+- Use full absolute URLs.
+- Use slug format: lowercase-hyphenated.
+- Phone behavior:
+  if phone is omitted or "" it is hidden
+- Use mapPlaceholder: true only when the map destination is not yet known.
+- Keep field order consistent when adding new objects.
+- Keep entries in the centralized #all-entries-data JSON array and set the correct group value for each object.
+- The renderer and canonical schema live near the end of <body>.--><nav class="zone-nav">
+<a href="#boone">
+    Boone
+   </a>
+<a href="#blowing-rock">
+    Blowing Rock
+   </a>
+<a href="#valle-crucis">
+    Valle Crucis / Todd
+   </a>
+<a href="#banner-elk">
+    Banner Elk
+   </a>
+<a href="#grandfather">
+    Grandfather / Linville
+   </a>
+<a href="#spruce-pine">
+    Spruce Pine
+   </a>
+<a href="#gem-mining">Gem Mining</a>
+<a href="#hiking">Hiking</a>
+<a href="#swimming-holes">Swimming</a>
+<a href="#stargazing">Stargazing</a>
+<a href="#after-dark">Night Life</a>
+<a href="#sweets">Sweets</a>
+<a href="#rainy-day">Rainy Day</a>
+<a href="#water">
+    Water
+   </a>
+<a href="#dining">
+    Dining
+   </a>
+</nav>
+<main class="page-content"><noscript>This page renders activity entries from embedded JSON. Enable JavaScript to view them.</noscript>
+<div class="container"><div class="entry-schema-note" hidden=""><pre>{
+  "slug": "sample-entry",
+  "name": "Sample Entry",
+  "url": "https://example.com",
+  "type": "Activity",
+  "tags": [
+    {
+      "label": "Family",
+      "class": "tag-family"
+    }
+  ],
+  "price": "$$",
+  "mapCoords": "36.1110,-81.8110",
+  "mapQuery": "Sample Entry Boone NC",
+  "mapUrl": "https://www.google.com/maps/dir/?api=1&amp;destination=Sample+Entry+Boone+NC",
+  "mapPlaceholder": false,
+  "description": "One or two sentence description.",
+  "note": "Optional note or booking guidance.",
+  "noteClass": "",
+  "hoursLabel": "Open daily",
+  "hoursText": "10 am \u2013 6 pm",
+  "phone": "",
+  "hoursWarning": "Optional warning line"
+}</pre></div>
+<!-- BOONE -->
+<section class="zone" data-zone="boone" id="boone">
+<header class="zone-header">
+<div class="zone-number">
+       1
+      </div>
+<div>
+<div class="zone-name">
+        Boone — In Town
+       </div>
+<div class="zone-note">
+        Base camp. Multiple stops cluster easily on the same day.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="6" data-group="boone" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- BLOWING ROCK -->
+<section class="zone" data-zone="blowing-rock" id="blowing-rock">
+<header class="zone-header">
+<div class="zone-number">
+       2
+      </div>
+<div>
+<div class="zone-name">
+        Blowing Rock &amp; Blue Ridge Parkway
+       </div>
+<div class="zone-note">
+        ~20 min south of Boone on US-321. Main Street, The Blowing Rock, Tweetsie, Mystery Hill, and Julian Price Park are all within 2 miles of each other.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="10" data-group="blowing-rock" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- VALLE CRUCIS / TODD -->
+<section class="zone" data-zone="valle-crucis" id="valle-crucis">
+<header class="zone-header">
+<div class="zone-number">
+       3
+      </div>
+<div>
+<div class="zone-name">
+        Valle Crucis &amp; Todd
+       </div>
+<div class="zone-note">
+        Valle Crucis is ~8 mi west of Boone. Todd is ~14 mi northwest. Pair them on a river day — both are along the same valley corridor.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="4" data-group="valle-crucis" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- BANNER ELK -->
+<section class="zone" data-zone="banner-elk" id="banner-elk">
+<header class="zone-header">
+<div class="zone-number">
+       4
+      </div>
+<div>
+<div class="zone-name">
+        Banner Elk, Beech Mountain &amp; Sugar Mountain
+       </div>
+<div class="zone-note">
+        ~30–40 min south of Boone via US-321/NC-184. Worth a full dedicated day.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="10" data-group="banner-elk" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- GRANDFATHER MTN / LINVILLE -->
+<section class="zone" data-zone="grandfather" id="grandfather">
+<header class="zone-header">
+<div class="zone-number">
+       5
+      </div>
+<div>
+<div class="zone-name">
+        Grandfather Mountain &amp; Linville
+       </div>
+<div class="zone-note">
+        ~40–50 min south of Boone. Cluster Grandfather Mountain + Linville Caverns + Linville Falls + Wiseman's View on the same day — all within 15 minutes of each other.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="6" data-group="grandfather" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- SPRUCE PINE -->
+<section class="zone" data-zone="spruce-pine" id="spruce-pine">
+<header class="zone-header">
+<div class="zone-number">
+       6
+      </div>
+<div>
+<div class="zone-name">
+        Spruce Pine &amp; Little Switzerland
+       </div>
+<div class="zone-note">
+        ~50–60 min south of Boone. Plan a full dedicated day and pair all three stops together. A paradise for geology lovers and gem hunters alike.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="5" data-group="spruce-pine" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- WATER ACTIVITIES -->
+<!-- THEMATIC SECTIONS -->
+<section class="special-section" data-zone="gem-mining" id="gem-mining">
+<header class="special-header">
+<div class="zone-number">7</div>
+<div>
+<div class="zone-name">Gem Mining — Comparison</div>
+<div class="zone-note">Three strong options, each good for a different kind of day.</div>
+</div>
+</header>
+<div class="fine-dining-box">
+<div class="fine-dining-title">How to think about these</div>
+<p>These three choices are not interchangeable. Doc's Rocks is the spontaneous add-on. Foggy Mountain is the best all-around family mining day. Emerald Village is the serious mining-heritage destination.</p>
+<p><strong>At a glance:</strong> Doc's Rocks works best as a light Mystery Hill extension, Foggy Mountain is the weather-proof family stand-alone, and Emerald Village is the fullest geology-and-history commitment — especially if the July 11 black-light tour is still available.</p>
+</div>
+<div class="entries" data-entry-count="3" data-group="gem-mining" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="special-section" data-zone="hiking" id="hiking">
+<header class="special-header">
+<div class="zone-number">8</div>
+<div>
+<div class="zone-name">Hiking — Full Comparison</div>
+<div class="zone-note">Grouped by zone, with effort and payoff balanced for mixed-energy days.</div>
+</div>
+</header>
+<div class="fine-dining-box">
+<div class="fine-dining-title">Reading the list</div>
+<p>These are roundtrip estimates aimed at a mixed-fitness group rather than ultra-fast hikers. Several of these trailheads naturally support splitting the group, with one subset doing the short version and another continuing for a bigger payoff.</p>
+</div>
+<div class="entries" data-entry-count="15" data-group="hiking" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="water-section" data-zone="swimming-holes" id="swimming-holes">
+<header class="water-header">
+<div class="zone-number">9</div>
+<div>
+<div class="zone-name" style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;">Swimming Holes</div>
+<div style="color:rgba(255,255,255,0.7);font-style:italic;font-size:0.82rem;">Best for wading, cold-water play, and low-structure water time.</div>
+</div>
+</header>
+<div class="entries" data-entry-count="3" data-group="swimming-holes" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="special-section" data-zone="stargazing" id="stargazing">
+<header class="special-header">
+<div class="zone-number">10</div>
+<div>
+<div class="zone-name">Stargazing / Dark Sky</div>
+<div class="zone-note">Low-cost night options, one true observatory option, and peak firefly season in play.</div>
+</div>
+</header>
+<div class="fine-dining-box">
+<div class="fine-dining-title">Night-sky context</div>
+<p>July is prime season for both Milky Way viewing and fireflies in the North Carolina mountains. Mountain nights will feel cooler than the valleys even after a warm day, so this section plays best if people bring one extra layer and check cloud cover before committing.</p>
+</div>
+<div class="entries" data-entry-count="3" data-group="stargazing" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="special-section" data-zone="after-dark" id="after-dark">
+<header class="special-header">
+<div class="zone-number">11</div>
+<div>
+<div class="zone-name">Night Life</div>
+<div class="zone-note">Late-night food, live music, ticketed evenings, and the one can't-miss geology night.</div>
+</div>
+</header>
+<div class="entries" data-entry-count="5" data-group="after-dark" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="dining-section" data-zone="sweets" id="sweets">
+<header class="dining-header">
+<div class="zone-number">12</div>
+<div>
+<div class="zone-name">Sweets &amp; Treats</div>
+<div class="zone-note">Dessert stops, candy add-ons, and easy evening sugar detours.</div>
+</div>
+</header>
+<div class="entries" data-entry-count="4" data-group="sweets" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="special-section" data-zone="rainy-day" id="rainy-day">
+<header class="special-header">
+<div class="zone-number">13</div>
+<div>
+<div class="zone-name">Rainy Day Reference</div>
+<div class="zone-note">Useful when a July mountain storm changes the shape of the day.</div>
+</div>
+</header>
+<div class="fine-dining-box">
+<div class="fine-dining-title">Why this exists</div>
+<p>When it rains in the NC mountains in July, it can rain hard and stay that way for hours. These are the strongest backups that still feel like real trip choices instead of settling for a wasted day.</p>
+</div>
+<div class="entries" data-entry-count="5" data-group="rainy-day" data-render-mode="json"><!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<section class="water-section" data-zone="water" id="water">
+<header class="water-header">
+<div class="zone-number">14</div>
+<div>
+<div class="zone-name" style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;">
+        Water Activities
+       </div>
+<div style="color:rgba(255,255,255,0.7);font-style:italic;font-size:0.82rem;">
+        Best combined on one dedicated water day. Book all outfitters well in advance — July is peak season.
+       </div>
+</div>
+</header>
+<div class="entries" data-entry-count="3" data-group="water" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+<!-- THURSDAY OPTIONS -->
+<!-- DINING -->
+<section class="dining-section" data-zone="dining" id="dining">
+<header class="dining-header"><div class="zone-number">15</div><div><div class="zone-name">Dining Reference Guide</div><div class="zone-note">Organized by area — pair restaurants with nearby activities to minimize driving. Call ahead for fine dining reservations.</div></div></header>
+<!-- BOONE -->
+<div class="dining-area-header">
+      Boone
+     </div>
+<div class="entries" data-entry-count="11" data-group="dining--boone" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+<!-- BLOWING ROCK -->
+<div class="dining-area-header">
+      Blowing Rock
+     </div>
+<div class="entries" data-entry-count="7" data-group="dining--blowing-rock" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+<!-- BANNER ELK -->
+<div class="dining-area-header">
+      Banner Elk
+     </div>
+<div class="entries" data-entry-count="5" data-group="dining--banner-elk" data-render-mode="json">
+<!--ENTRY TEMPLATE
+Preferred copy source: #entry-template-activity or #entry-template-dining near the top of <main>.
+Minimum authoring checklist:
+- update id / data-entry-name / data-entry-slug
+- update website href and visible title
+- set entry-type
+- add/remove tags and price
+- replace map placeholder when available
+- fill in mapCoords or mapQuery when known
+- add phone or leave "" to hide it
+- update description / note / hours-->
+<!-- Entries for this container now come from the centralized #all-entries-data JSON block near the end of the file. --></div>
+</section>
+</div>
+</main>
+<footer>
+<div>
+    NC High Country — July 5–12, 2026  ·  Grandfather Mountain Highland Games Week
+   </div>
+<div style="margin-top:0.5rem;opacity:0.6;">
+    Verify all hours, prices, and schedules directly with venues before the trip — details may change for the 2026 season.
+   </div>
+</footer>
+<script id="all-entries-data" type="application/json">
+[
+  {
+    "slug": "downtown-king-street",
+    "name": "Downtown King Street",
+    "url": "https://downtownboonenc.com/",
+    "type": "Shopping / Exploring",
+    "mapUrl": "https://www.google.com/maps?q=King+Street+Boone+NC",
+    "mapPlaceholder": false,
+    "description": "Boone's main street has a distinctly different energy from Blowing Rock — more college-town and eclectic, with independent bookstores, game and comic shops, vintage stores, and locally owned restaurants. Distinct enough from the Blowing Rock boutique crawl to justify its own outing. Plenty of benches and coffee shops make it easy to browse at a relaxed pace.",
+    "hoursLabel": "Daily",
+    "hoursText": "Shops ~10 am – 6 pm",
+    "phone": "",
+    "group": "boone"
+  },
+  {
+    "slug": "turchin-center-for-visual-arts",
+    "name": "Turchin Center for Visual Arts",
+    "url": "https://tcva.appstate.edu/",
+    "type": "Art Museum",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapQuery": "Turchin Center for the Visual Arts Boone NC",
+    "description": "On the App State campus, free admission. Contemporary and Appalachian art across multiple galleries, with substantive rotating exhibitions rather than a token gallery stop. Air-conditioned and easy to pair with a King Street walk afterward.",
+    "hoursLabel": "Admission",
+    "hoursText": "Free <br/> Check current gallery hours",
+    "phone": "(828) 262-3017",
+    "group": "boone",
+    "mapUrl": "https://www.google.com/maps?q=Turchin+Center+for+Visual+Arts+Boone+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "mysterium-escape-adventure",
+    "name": "Mysterium Escape Adventure",
+    "url": "https://mysteriumboone.com/",
+    "type": "Escape Room",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps?q=Mysterium+Escape+Adventure+Boone+NC",
+    "mapPlaceholder": false,
+    "description": "Downtown Boone on W. King St. Owner-built rooms using movie prop department experience — completely original scenarios, not off-the-shelf kits. Rooms include \"The Omega Device\" (foil a supervillain's plan) and \"The Inheritance\" (solve a deceased uncle's elaborate puzzles). Groups of 2–8 per room. Book a timeslot online in advance.",
+    "hoursLabel": "Thu–Sun",
+    "hoursWarning": "Closed Mon–Wed",
+    "hoursText": "12 pm – 9 pm",
+    "phone": "(828) 865-0009",
+    "group": "boone"
+  },
+  {
+    "slug": "hickory-ridge-living-history-museum",
+    "name": "Hickory Ridge Living History Museum",
+    "url": "https://www.horninthewest.com/tours-events",
+    "type": "Historical Site",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps?q=Hickory+Ridge+Living+History+Museum+Boone+NC",
+    "mapPlaceholder": false,
+    "description": "Same grounds as Horn in the West. Six authentic 18th-century log cabins staffed by costumed interpreters demonstrating frontier Appalachian life. Short, contained visit with minimal walking. Works well as a meaningful historical stop for a mixed-energy group.",
+    "hoursLabel": "Check site",
+    "hoursText": "Seasonal hours",
+    "phone": "(828) 264-2120",
+    "group": "boone"
+  },
+  {
+    "slug": "horn-in-the-west",
+    "name": "Horn in the West",
+    "url": "https://horninthewest.com/",
+    "type": "Outdoor Drama",
+    "tags": [
+      {
+        "label": "Theater",
+        "class": "tag-theater"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps?q=Horn+in+the+West+Boone+NC",
+    "mapPlaceholder": false,
+    "description": "Daniel Boone Amphitheater. America's longest-running Revolutionary War outdoor drama. 2026 is a special America 250th anniversary year, making it an especially significant season. Features Cherokee cultural elements, frontier history, and dramatic mountain staging. Tickets are very affordable. The amphitheater is open-air and carved into mountain terrain — bring seat cushions. Note: Thursday evenings at 6pm is a natural option for anyone not attending the Highland Games that night (the Games' Torchlight Ceremony runs at dusk ~9pm, so ambitious groups could even do both).",
+    "note": "Pairs naturally with the adjacent Hickory Ridge Living History Museum (six authentic 18th-century log cabins, costumed interpreters) — visit the same day before or after the show.",
+    "hoursLabel": "Thu–Sat",
+    "hoursWarning": "Closed Sun–Wed",
+    "hoursText": "Shows at 6 pm",
+    "phone": "(828) 264-2120",
+    "group": "boone"
+  },
+  {
+    "slug": "ashe-county-park-disc-golf",
+    "name": "Ashe County Park Disc Golf",
+    "url": "https://www.asheparks.com",
+    "type": "Disc Golf / Free",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      }
+    ],
+    "mapQuery": "Ashe County Park Jefferson NC",
+    "description": "Jefferson, about 20 minutes from Boone on US-421. A full 18-hole course that makes good use of High Country elevation changes. Free, well maintained, and the better dedicated disc golf outing compared with the more casual Banner Elk option.",
+    "hoursLabel": "Access",
+    "hoursText": "Free <br/> Daylight hours",
+    "phone": "",
+    "group": "boone",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "blowing-rock-main-street-boutiques",
+    "name": "Blowing Rock Main Street Boutiques",
+    "url": "https://blowingrock.com/shopping/",
+    "type": "Shopping",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps/place/Main+St,+Blowing+Rock,+NC+28605",
+    "mapPlaceholder": false,
+    "description": "The boutique crawl — independent art galleries, craft stores, jewelry, home goods, and clothing on a short, compact village strip. One of the nicest concentrated shopping streets in the NC mountains. Benches are scattered throughout for comfortable breaks between shops.",
+    "hoursLabel": "Daily",
+    "hoursText": "Most shops 10 am – 5/6 pm",
+    "phone": "",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "moses-cone-memorial-park-flat-top-manor",
+    "name": "Moses Cone Memorial Park / Flat Top Manor",
+    "url": "https://www.nps.gov/blri/planyourvisit/moses-h-cone-memorial-park-mp-294.htm",
+    "type": "National Park / Craft Gallery",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Blue Ridge Parkway milepost 294. The historic Cone Estate mansion houses the Parkway Craft Center — one of the finest collections of Appalachian crafts and artwork in the region, managed by the Southern Highland Craft Guild. Those who love crafts, folk art, and Appalachian heritage will love this. Carriage roads wind through meadows and apple orchards. Peaceful, beautiful, completely free, and dog-friendly.",
+    "hoursLabel": "Daily",
+    "hoursText": "Craft Center: 9 am – 5 pm",
+    "phone": "",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "julian-price-memorial-park-price-lake",
+    "name": "Julian Price Memorial Park / Price Lake",
+    "url": "https://www.blueridgeparkway.org/poi/julian-price-memorial-park/",
+    "type": "National Park / Picnic",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Blue Ridge Parkway milepost 297, just outside Blowing Rock. Picnic tables with grills right on a stunning mountain lake — one of the most beautiful park settings in Appalachia. Flat walking paths around the water for all fitness levels. Dog-friendly on trails. Arrive by 10am in July for a good table. The lake loop is gentle enough for everyone.",
+    "hoursLabel": "Daily, always open",
+    "hoursText": "Free · Grills available",
+    "phone": "",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "linn-cove-viaduct",
+    "name": "Linn Cove Viaduct",
+    "url": "https://www.blueridgeparkway.org/poi/linn-cove-viaduct",
+    "type": "Scenic / Accessible Walkway / Free",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapQuery": "Linn Cove Viaduct Visitor Center NC",
+    "description": "Blue Ridge Parkway milepost 304.4 between Blowing Rock and Banner Elk. The S-curved viaduct that hugs the flank of Grandfather Mountain, famously the last section of the entire Parkway completed in 1987. Short accessible walk onto the viaduct itself, a visitor center, and long views up the mountain face.",
+    "hoursLabel": "Stop length",
+    "hoursText": "Short stop <br/> Free",
+    "phone": "",
+    "group": "blowing-rock",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "the-blowing-rock",
+    "name": "The Blowing Rock",
+    "url": "https://theblowingrock.com/",
+    "type": "Natural Attraction",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps?q=The+Blowing+Rock+NC",
+    "mapPlaceholder": false,
+    "description": "The famous rock outcrop over Johns River Gorge where thermal updrafts can blow lightweight objects back upward. Brief paved walk from parking to an accessible viewing platform. Distinctive natural stop with a modest admission fee. Budget 30–45 minutes. Pairs naturally with a Main Street visit right after.",
+    "hoursLabel": "Daily",
+    "hoursText": "9 am – 6 pm (summer)",
+    "phone": "(828) 295-7111",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "mystery-hill-doc-s-rocks-gem-mine",
+    "name": "Mystery Hill + Doc's Rocks Gem Mine",
+    "url": "https://mysteryhill.com/",
+    "type": "Roadside Attraction / Gem Mining",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Mystery Hill is the classic gravity-defying roadside attraction where familiar visual cues stop making sense for a while. Doc's Rocks gem sluicing is right next door. Works as a lighter roadside attraction day or as a more casual lead-in to Emerald Village later in the trip. The scientifically curious will enjoy figuring out why the illusions work, while younger kids usually just enjoy the chaos.",
+    "hoursLabel": "Daily",
+    "hoursText": "9 am – 6 pm",
+    "phone": "",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "tweetsie-railroad",
+    "name": "Tweetsie Railroad",
+    "url": "https://tweetsie.com/",
+    "type": "Theme Park",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      },
+      {
+        "label": "Buy Tickets Online",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps?q=Tweetsie+Railroad+Blowing+Rock+NC",
+    "mapPlaceholder": false,
+    "description": "Long-running family theme park built around a working 1917 Baldwin steam locomotive. Includes Wild West shows, a petting zoo, carnival rides, gold panning, and a chair lift to the mountain summit. Strong fit for families and for anyone who likes old-fashioned Americana. Adults ~$65, children 3–12 ~$45, under 3 free.",
+    "note": "Open Thursday–Monday in summer and closed Tuesday–Wednesday. Tweetsie (near Blowing Rock) and the Highland Games (near Banner Elk) are about 35 minutes apart, so they can be paired on the same day if desired.",
+    "hoursLabel": "Thu–Mon",
+    "hoursWarning": "Closed Tue & Wed",
+    "hoursText": "10 am – 6 pm",
+    "phone": "(828) 264-9061",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "chetola-sporting-reserve",
+    "name": "Chetola Sporting Reserve",
+    "url": "https://chetola.com/sporting-reserve",
+    "type": "Clay Shooting / Archery",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      },
+      {
+        "label": "Adults",
+        "class": "tag-adult"
+      }
+    ],
+    "mapQuery": "Chetola Sporting Reserve Blowing Rock NC",
+    "description": "Blowing Rock sporting reserve open to the public with day passes. A 12-station sporting clays course with professional instruction available, plus archery. Good option for adults or older children who want something active without committing to a full wilderness day.",
+    "hoursLabel": "Reservations",
+    "hoursText": "Reservations recommended",
+    "phone": "",
+    "group": "blowing-rock",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "westglow-resort-and-spa",
+    "name": "Westglow Resort & Spa",
+    "url": "https://www.westglow.com",
+    "type": "Spa / Wellness",
+    "tags": [
+      {
+        "label": "Book Months in Advance",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Mountain spa open to non-guests for day spa services including couples treatments, massage, and facials. Historic estate setting. July appointments tend to fill well in advance. Daingerfield's Restaurant is on the same property, and several mobile massage services also operate in the Boone area.",
+    "hoursLabel": "By appointment",
+    "hoursText": "Appointments recommended <br/> westglow.com",
+    "phone": "(828) 295-4463",
+    "group": "blowing-rock"
+  },
+  {
+    "slug": "mast-general-store-valle-crucis",
+    "name": "Mast General Store — Valle Crucis",
+    "url": "https://www.mastgeneralstore.com",
+    "type": "Historic Store",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "The original Mast General Store, operating since 1883 and listed on the National Register of Historic Places. Wide-plank wood floors, barrel candy, cast iron cookware, practical goods, and a strong sense of place. Of the Mast locations, this is the one with the most historical character.",
+    "hoursLabel": "Mon–Sat",
+    "hoursText": "7 am – 6:30 pm <br/> 12 – 6 pm",
+    "phone": "",
+    "group": "valle-crucis"
+  },
+  {
+    "slug": "valle-crucis-community-park",
+    "name": "Valle Crucis Community Park",
+    "url": "https://www.vallecrucispark.org",
+    "type": "Free / Family / Unstructured",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapQuery": "Valle Crucis Community Park NC",
+    "description": "A 28-acre riverfront park across from the Mast Store with multiple playgrounds, toddler swings, a zip-line slide, picnic areas, and a paved path along the Watauga River. The river here is shallow, slow-moving, cold, and clear in July, with a sandy bottom in places that makes supervised wading easy to imagine.",
+    "hoursLabel": "Access",
+    "hoursText": "Free <br/> Park hours vary seasonally",
+    "phone": "",
+    "group": "valle-crucis",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "crab-orchard-falls",
+    "name": "Crab Orchard Falls",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/crab-orchard-falls-trail",
+    "type": "Waterfall / Short Hike",
+    "tags": [
+      {
+        "class": "tag-family",
+        "label": "Family"
+      }
+    ],
+    "mapQuery": "Crab Orchard Falls Valle Crucis NC",
+    "description": "About five minutes from the Mast Store up Hwy 194. Park at the Valle Crucis Conference Center and walk roughly half a mile to the falls. Easy terrain, creek play at the base, and a very low barrier to entry compared with the region's more demanding waterfall hikes.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "45–60 min <br/> Easy terrain",
+    "phone": "",
+    "group": "valle-crucis",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "magnet-fishing-new-river-at-todd",
+    "name": "Magnet Fishing — New River",
+    "url": "https://greenvalleypark.org/",
+    "type": "Outdoor Activity",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "The New River is one of the oldest rivers in the world and has seen centuries of travel and settlement, so the appeal is partly in the possibility of odd finds. The setting also adds genuine geology interest, since the New River predates the mountains it flows through and runs north.",
+    "hoursText": "Dawn to Dusk",
+    "phone": "",
+    "group": "valle-crucis"
+  },
+  {
+    "slug": "grandfather-mountain-highland-games",
+    "name": "Grandfather Mountain Highland Games",
+    "url": "https://www.gmhg.org",
+    "type": "Festival / Cultural Event",
+    "tags": [
+      {
+        "label": "Buy Tickets Early",
+        "class": "tag-bookasap"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "MacRae Meadows, base of Grandfather Mountain. July 9–12, 2026 — the 70th annual gathering. One of the country's major Scottish Highland Games weekends, with heavy athletics, Highland dancing, piping and drumming, Celtic music, clan tents, artisan vendors, and Scottish food. Children's programming on Thursday and Friday includes sack races, junior caber toss, and face painting. The Thursday evening Torchlight Ceremony is one of the signature events. Ticket prices are available at gmhg.org/prices/. Shuttle service from remote lots is required most days.",
+    "note": "Thursday is the least crowded day and a comfortable entry point for first-timers. Saturday is the highest-energy main event day.",
+    "hoursLabel": "July 9–12, 2026",
+    "hoursText": "Thu: afternoon/eve <br/> Fri–Sun: all day <br/> Ticket prices: gmhg.org/prices/",
+    "phone": "",
+    "group": "grandfather"
+  },
+  {
+    "slug": "wildcat-lake",
+    "name": "Wildcat Lake",
+    "url": "https://www.bannerelk.com/attractions/wildcat-lake/",
+    "type": "Swimming / Family / Free",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapQuery": "Wildcat Lake Banner Elk NC",
+    "description": "Banner Elk. White sand beach, swimming pier, fishing dock, and lifeguards on duty in season. Free, open June through August, and one of the simplest water-day options for a mixed group or for swimming with a young child.",
+    "hoursLabel": "Season",
+    "hoursText": "June – August <br/> Lifeguards in season",
+    "phone": "",
+    "group": "banner-elk",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "wilderness-run-alpine-coaster",
+    "name": "Wilderness Run Alpine Coaster",
+    "url": "https://www.wildernessrunalpinecoaster.com",
+    "type": "Thrill Ride",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      },
+      {
+        "label": "Reserve Online",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "NC's first alpine coaster, near Sugar Mountain. A 3,160-foot gravity track with loops, waves, and turns, with rider-controlled brakes up to 27 mph. A child can ride with a parent; height restrictions apply. Also has an Adventure Course ropes and obstacles area. Located only a few miles from the Highland Games site, so it combines easily with that area.",
+    "hoursLabel": "Daily",
+    "hoursText": "Mon–Thu: 10am–6pm <br/> Fri–Sun: 10am–7pm <br/> wildernessrunalpinecoaster.com",
+    "phone": "",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "heros-axe-house-seven-devils",
+    "name": "Hero's Axe House",
+    "url": "https://herosaxehouse.com/",
+    "type": "Axe Throwing",
+    "tags": [
+      {
+        "label": "Adults",
+        "class": "tag-adult"
+      }
+    ],
+    "mapQuery": "Hero's Axe House Seven Devils NC",
+    "description": "Seven Devils between Banner Elk and Boone. Six lanes of axe throwing with digital projected targets and coached sessions, owned and operated by first responders. Good mixed-adult outing with no prior experience required.",
+    "hoursLabel": "Standard session",
+    "hoursText": "75 minutes including instruction",
+    "phone": "(828) 898-4376",
+    "group": "banner-elk",
+    "mapUrl": "https://www.google.com/maps?q=Hero%27s+Axe+House+Seven+Devils+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "apple-hill-farm-alpacas",
+    "name": "Apple Hill Farm — Alpacas",
+    "url": "https://applehillfarmnc.com/",
+    "type": "Animal Farm",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "A working alpaca farm near Banner Elk open to visitors. Strong fit for animal lovers, and the farm shop adds handmade fiber goods for anyone interested in crafts. Tours are by reservation and often fill in advance.",
+    "hoursLabel": "Call ahead",
+    "hoursText": "Hours vary <br/> Reservations recommended",
+    "phone": "(828) 898-5412",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "edge-of-the-world-outfitters-rock-climbing-ziplining",
+    "name": "Edge of the World Outfitters — Rock Climbing / Ziplining",
+    "url": "https://edgeoworld.com/",
+    "type": "Outdoor Adventure",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Downtown Banner Elk outfitter offering guided rock climbing in the High Country's mountain terrain. Good fit for the more active members of the group. Hawksnest Zip Lines nearby is another option if ziplining is a better match.",
+    "hoursLabel": "Check site",
+    "hoursText": "edgeoftheworldoutfitters.com <br/> Advance booking recommended",
+    "phone": "",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "beech-mountain-summer-chair-lift-ride",
+    "name": "Beech Mountain — Summer Chair Lift Ride and Disc Golf",
+    "url": "https://www.beechmountainresort.com/summer/scenic-lift-rides/",
+    "type": "Scenic Ride",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Beech Mountain Resort offers summer chair lift rides to the summit at 5,506 ft — the highest incorporated town in eastern America. Spectacular 360° views. A taproom at the top. Mountain biking available for those who want the downhill experience. Those who prefer not to hike can ride the lift and enjoy the panoramic views without any walking. Good pairing with other Banner Elk stops.",
+    "hoursLabel": "Thursday to Sunday (2025 hours)",
+    "hoursText": "Operates on a seasonal schedule; 2025 hours are the current reference",
+    "phone": "",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "lees-mcrae-forum-monday-evening-concert-series",
+    "name": "Lees-McRae Forum — Monday Evening Concert Series",
+    "url": "https://www.lmc.edu/forum",
+    "type": "Live Music",
+    "tags": [
+      {
+        "label": "Theater / Performance",
+        "class": "tag-theater"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Lees-McRae College, Banner Elk. The 2026 Forum season includes the Western Piedmont Symphony performing on Monday, July 6, with showtimes at 5:00 pm and 7:30 pm. Affordable evening concert option for the group.",
+    "hoursLabel": "Mondays (July 6)",
+    "hoursText": "5:00 pm & 7:30 pm <br/> Ticketing: lmc.edu/forum",
+    "phone": "",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "crossnore-weavers-and-gallery",
+    "name": "Crossnore Weavers & Gallery",
+    "url": "https://www.crossnore.org/crossnore-weavers/",
+    "type": "Appalachian Craft",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Crossnore, between Banner Elk and Linville. A nonprofit weaving room preserving traditional hand-weaving since 1920, with all proceeds supporting a children's school. One of the most remarkable craft institutions in Appalachia. Craft and history lovers will be moved by both the craftsmanship and the mission. Those who appreciate traditional arts will find it equally compelling. Short, meaningful visit that fits naturally into the Linville day trip.",
+    "hoursLabel": "Mon–Sat",
+    "hoursText": "9 am – 5 pm <br/> crossnoreweavers.org",
+    "phone": "",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "carlton-gallery-fine-art",
+    "name": "Carlton Gallery — Fine Art",
+    "url": "https://www.carltongallery.com",
+    "type": "Art Gallery",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Banner Elk. One of the most established fine art galleries in NC, in business for over 40 years. Rotating collection of high-quality regional and national artists in a casually elegant atmosphere. No pressure to buy — a genuine gallery experience. A pleasant short stop that pairs well with anything else in downtown Banner Elk.",
+    "hoursLabel": "Mon–Sat",
+    "hoursText": "10 am – 5 pm <br/> carltongallery.com",
+    "phone": "",
+    "group": "banner-elk"
+  },
+  {
+    "slug": "grandfather-mountain-mile-high-swinging-bridge",
+    "name": "Grandfather Mountain — Mile High Swinging Bridge",
+    "url": "https://grandfather.com/swinging-bridge/",
+    "type": "Natural Attraction",
+    "tags": [
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "One of the most iconic attractions in NC. A suspension bridge at 5,305 ft connecting two rocky peaks with views into multiple valleys. Accessible by paved road to a summit parking area. The Wilson Center for Nature Discovery has wildlife exhibits. For geology enthusiasts: the exposed Grandfather Mountain metamorphic rock formation is a distinct geological province literally named for this mountain — unlike any other rock sequence in the Appalachians.",
+    "hoursLabel": "Daily",
+    "hoursText": "8 am – 7 pm (summer) <br/> grandfather.com",
+    "phone": "",
+    "group": "grandfather"
+  },
+  {
+    "slug": "grandfather-mountain-animal-habitats",
+    "name": "Grandfather Mountain Animal Habitats",
+    "url": "https://grandfather.com/visit/things-to-do/wildlife-habitats/",
+    "type": "Wildlife / Family",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapQuery": "Grandfather Mountain Animal Habitats NC",
+    "description": "Black bear, river otter, bald eagle, cougar, and whitetail deer in large naturalistic enclosures built into the mountain landscape, with educational signage throughout. Included with standard Grandfather Mountain admission and especially useful if younger children are part of the day.",
+    "hoursLabel": "Included with",
+    "hoursText": "Standard park admission",
+    "phone": "",
+    "group": "grandfather",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "linville-caverns",
+    "name": "Linville Caverns",
+    "url": "https://www.linvillecaverns.com/",
+    "type": "Cave Tour",
+    "tags": [
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "https://www.google.com/maps?q=Linville+Caverns+Marion+NC",
+    "mapPlaceholder": false,
+    "description": "The only natural cavern open to the public in NC. Guided 30-minute tours on paved paths through limestone formations — stalactites, stalagmites, underground streams. Year-round temperature inside is 52°F — bring a light layer even in July. Geology enthusiasts get real cave content to dig into. Young children will alternate between awe and mild terror. Nearly all paved and flat inside — one of the most accessible attractions on this list.",
+    "hoursLabel": "Daily (summer)",
+    "hoursText": "9 am – 5 pm <br/> linvillecaverns.com",
+    "phone": "(828) 756-4171",
+    "group": "grandfather"
+  },
+  {
+    "slug": "linville-falls-overlook",
+    "name": "Linville Falls Overlook - Partially Open",
+    "url": "https://www.nps.gov/blri/planyourvisit/linville-falls-trails.htm",
+    "type": "Waterfall / Scenic",
+    "tags": [
+      {
+        "label": "Free (Blue Ridge Pkwy)",
+        "class": "tag-free"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Portions of this area remain closed after Helene, but some overlooks are open. Blue Ridge Parkway milepost 316.4. A short paved walk reaches the first overlook, while more athletic members of the group can continue farther for lower viewpoints. The gorge also offers an unusually clear look at the region's exposed metamorphic rock layers.",
+    "hoursLabel": "Always open",
+    "hoursText": "Visitor center: 9 am – 5 pm",
+    "phone": "",
+    "group": "grandfather"
+  },
+  {
+    "slug": "wiseman-s-view-linville-gorge-overlook",
+    "name": "Wiseman's View — Linville Gorge Overlook",
+    "url": "https://www.fs.usda.gov/r08/northcarolina/recreation/wisemans-view",
+    "type": "Drive-Up Overlook",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "A drive-up overlook via Kistler Memorial Hwy off NC-181 with one of the most dramatic views in the eastern US into the Linville Gorge Wilderness — often called the \"Grand Canyon of the East.\" Very short walk from parking. Free, uncrowded, no facilities. A truck or higher-clearance vehicle handles the access road easily. For geology enthusiasts: the gorge here exposes some of the oldest rock in the entire Appalachian chain.",
+    "hoursLabel": "Always open",
+    "hoursText": "Free, no facilities <br/> Truck/higher clearance preferred",
+    "phone": "",
+    "group": "grandfather"
+  },
+  {
+    "slug": "grandfather-trout-farm",
+    "name": "Grandfather Trout Farm",
+    "url": "https://www.tripadvisor.com/Attraction_Review-g48937-d3669722-Reviews-Grandfather_Trout_Farm-Banner_Elk_North_Carolina.html",
+    "type": "Fishing / Family Activity",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Working trout farm near Grandfather Mountain open to the public. Catching is close to guaranteed; no license required, with payment per fish caught. Good fit for anyone who wants a fishing experience without hiking to a stream, and the seating nearby makes it easy for others to watch.",
+    "hoursLabel": "Check hours",
+    "hoursText": "Seasonal hours <br/> Confirm before visiting",
+    "phone": "(828) 963-5098",
+    "group": "grandfather"
+  },
+  {
+    "slug": "museum-of-nc-minerals",
+    "name": "Museum of NC Minerals",
+    "url": "https://www.nps.gov/blri/planyourvisit/museum-of-north-carolina-minerals-mp-331.htm",
+    "type": "Museum / Geology",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Blue Ridge Parkway milepost 331, Spruce Pine. Covers the Spruce Pine Mining District, which contains some of the world's purest known quartz deposits. Those deposits are used in semiconductor manufacturing, so the museum gives useful context for why this area matters well beyond gem tourism. Small, free, and easy to pair with other Parkway stops.",
+    "hoursLabel": "Daily (summer)",
+    "hoursText": "9 am – 5 pm <br/> Free admission",
+    "phone": "",
+    "group": "spruce-pine"
+  },
+  {
+    "slug": "emerald-village-historic-mine-complex",
+    "name": "Emerald Village — Historic Mine Complex",
+    "url": "https://www.emeraldvillage.com",
+    "type": "Mining Heritage / Gem Mining",
+    "tags": [
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      },
+      {
+        "label": "Mobility Friendly",
+        "class": "tag-mobility"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Little Switzerland historic mining complex with real mine tours, a mining museum, and native gem sluicing using ore from the area. Useful if you want more actual mining history and geology context than a standard gem-mine stop provides. Open April–October.",
+    "hoursLabel": "April–Oct, Daily",
+    "hoursText": "9 am – 5 pm <br/> emeraldvillage.com",
+    "phone": "",
+    "group": "spruce-pine"
+  },
+  {
+    "slug": "emerald-village-black-light-mine-tour",
+    "name": "Emerald Village Black Light Mine Tour",
+    "url": "https://www.emeraldvillage.com/mines-activities/black-light-tour/",
+    "type": "Night Experience / Geology",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      }
+    ],
+    "mapQuery": "Bon Ami Mine Emerald Village Little Switzerland NC",
+    "description": "Saturday evenings only on limited seasonal dates. Guided underground Bon Ami Mine tour using ultraviolet light, where Hyalite Opal deposits glow vivid lime green and other minerals fluoresce in pinks and oranges. One of the most singular after-dark experiences anywhere in the High Country.",
+    "note": "Advance reservations are required; the July 11 slot is the one to pursue immediately.",
+    "hoursLabel": "Trip date",
+    "hoursText": "July 11 <br/> ~45 minutes after dark",
+    "phone": "(828) 765-6463",
+    "group": "spruce-pine",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "gem-mountain-spruce-pine",
+    "name": "Gem Mountain — Spruce Pine",
+    "url": "https://www.gemmountain.com",
+    "type": "Gem Mining",
+    "tags": [
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Alternative or complement to Emerald Village. Gem Mountain offers flume mining, a gem store, and guided trips to working private mines. Useful either as a simpler gem-focused stop or as an extension of a broader Spruce Pine mining day, since it sits only a few miles from Emerald Village.",
+    "hoursLabel": "Seasonal, daily",
+    "hoursText": "gemmountain.com <br/> Hours vary",
+    "phone": "",
+    "group": "spruce-pine"
+  },
+  {
+    "slug": "bare-dark-sky-observatory",
+    "name": "Bare Dark Sky Observatory / Earth to Sky Park",
+    "url": "https://www.mayland.edu/foundation/foundation-projects/earth-to-sky-park/",
+    "type": "Observatory / Stargazing",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapQuery": "Earth to Sky Park Burnsville NC",
+    "description": "Near Burnsville, pairing naturally with a Spruce Pine geology day. The Sam Scope is the largest telescope dedicated to public use in the Southeast, and guided evening sessions turn this into a fundamentally different experience from casual roadside stargazing.",
+    "hoursLabel": "Thursday, Friday, Saturday",
+    "hoursText": "Guided evening sessions",
+    "phone": "(828) 470-7584",
+    "group": "spruce-pine",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "docs-rocks-gem-mining-comparison",
+    "name": "Doc's Rocks Gem Mine",
+    "url": "https://docsrocks.org/",
+    "type": "Blowing Rock · Casual / First-Timer",
+    "mapQuery": "Doc's Rocks Gem Mine Blowing Rock NC",
+    "description": "Right next door to Mystery Hill. Low-commitment and easy to add onto that visit without creating a separate trip. Ore buckets are enriched with added material, so finds are effectively guaranteed, but the material is not native to this specific site.",
+    "hoursLabel": "Best for",
+    "hoursText": "Spontaneous add-on <br/> Kid-friendly first try",
+    "phone": "(828) 295-5402",
+    "group": "gem-mining",
+    "mapUrl": "https://www.google.com/maps?q=Doc%27s+Rocks+Gem+Mine+Blowing+Rock+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "foggy-mountain-gem-mining-comparison",
+    "name": "Foggy Mountain Gem Mine",
+    "url": "https://www.foggymountaingems.com/",
+    "type": "Boone · Best All-Around",
+    "mapQuery": "Foggy Mountain Gem Mine Boone NC",
+    "description": "Indoor and outdoor flumes make this one genuinely weather-proof. Staff identify finds and offer on-site cutting and polishing. More of a destination than Doc's Rocks, though less geologically substantive than Emerald Village.",
+    "hoursLabel": "Best for",
+    "hoursText": "Dedicated family mining stop",
+    "phone": "(828) 963-4367",
+    "group": "gem-mining",
+    "mapUrl": "https://www.google.com/maps?q=Foggy+Mountain+Gem+Mine+Boone+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "emerald-village-gem-mining-comparison",
+    "name": "Emerald Village",
+    "url": "https://www.emeraldvillage.com",
+    "type": "Little Switzerland · Serious Mining Heritage",
+    "tags": [
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      },
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapQuery": "Emerald Village Little Switzerland NC",
+    "description": "Twelve real historic mines, a proper mining museum, actual mine tours, and native-ore sluicing sourced from this district. This is the real geology-and-mining heritage choice, not just a tourist add-on.",
+    "hoursLabel": "Best for",
+    "hoursText": "Full destination day <br/> July 11 black-light tour",
+    "phone": "",
+    "group": "gem-mining",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "rough-ridge-tanawha-trail",
+    "name": "Rough Ridge — Tanawha Trail",
+    "url": "https://www.nps.gov/blri/planyourvisit/tanawha-trail.htm",
+    "type": "Boone · Easy-Moderate",
+    "mapQuery": "Rough Ridge Trailhead NC",
+    "description": "Blue Ridge Parkway milepost 302.8. Short approach to open rock outcroppings with panoramic views of Grandfather Mountain and the Linn Cove Viaduct below. One of the strongest view-to-effort stops in the region.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1.5 miles <br/> 30–45 min",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "boone-fork-loop-hebron-falls",
+    "name": "Boone Fork Loop / Hebron Falls",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/hebron-falls-via-boone-fork-trail",
+    "type": "Boone · Moderate",
+    "mapQuery": "Boone Fork Trail Julian Price Park NC",
+    "description": "Starts at the Julian Price Park picnic area. The full loop covers rhododendron tunnels, creek crossings, and Hebron Falls; turning around at the falls creates a shorter waterfall version for the less ambitious subgroup.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1.5–5.2 miles <br/> 1–3 hrs",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "elk-knob-summit-trail",
+    "name": "Elk Knob Summit Trail",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/elk-knob-summit-trail",
+    "type": "Boone · Moderate-Strenuous",
+    "mapQuery": "Elk Knob State Park Summit Trail NC",
+    "description": "About 10 miles north of Boone near Zionville. Steady elevation gain to a rewarding summit at 5,520 feet, usually with less crowding than the parkway staples.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "3.8 miles <br/> 2.5–3 hrs",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "glen-burney-trail",
+    "name": "Glen Burney Trail",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/glen-burney-trail",
+    "type": "Blowing Rock · Moderate",
+    "mapQuery": "Glen Burney Trail Blowing Rock NC",
+    "description": "Starts at Annie Cannon Park in downtown Blowing Rock and visits three waterfalls. The return climb is meaningfully harder than the casual downtown trailhead might suggest.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "3.1 miles <br/> 1.5–2 hrs",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "bass-lake-loop",
+    "name": "Bass Lake Loop",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/bass-lake-loop-trail",
+    "type": "Blowing Rock · Easy / Flat",
+    "mapQuery": "Bass Lake Blowing Rock NC",
+    "description": "Moses Cone Memorial Park. Flat gravel loop around the lake with benches, wildlife, and views of Flat Top Manor. Excellent for strollers, mobility aids, and split-energy groups.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1 mile <br/> ~30 min",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "flat-top-road-trail",
+    "name": "Flat Top Road Trail",
+    "url": "https://myhikes.org/trails/flat-top-tower-hike",
+    "type": "Blowing Rock · Moderate",
+    "mapQuery": "Flat Top Tower Trail Moses Cone NC",
+    "description": "Wide gravel carriage road from Moses Cone to the fire tower on Flat Top Mountain. Useful middle option between the easy Bass Lake loop and the much harder Glen Burney outing.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "5.2 miles <br/> ~2.5 hrs",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "cascades-trail-eb-jeffress-park",
+    "name": "Cascades Trail — E.B. Jeffress Park",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/cascades-trail",
+    "type": "Valle Crucis / Todd · Easy",
+    "mapQuery": "E.B. Jeffress Park Cascades Trail NC",
+    "description": "Blue Ridge Parkway milepost 272 on the route toward Valle Crucis. Easy loop to a beautiful cascading waterfall and one of the most forgiving family-friendly stops in the guide.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "2 miles <br/> ~1 hr",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "crab-orchard-falls-hiking",
+    "name": "Crab Orchard Falls",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/crab-orchard-falls-trail",
+    "type": "Valle Crucis / Todd · Easy",
+    "mapQuery": "Crab Orchard Falls Valle Crucis NC",
+    "description": "Five minutes from the Mast Store and probably the minimum-commitment hike option in this whole Valle Crucis/Todd corridor.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1 mile <br/> 45–60 min",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "beacon-heights",
+    "name": "Beacon Heights",
+    "url": "https://ashevilletrails.com/blue-ridge-parkway/beacon-heights-trail/",
+    "type": "Banner Elk · Easy-Moderate",
+    "mapQuery": "Beacon Heights Trailhead NC",
+    "description": "Beacon Heights Trail is a short but scenic Blue Ridge Parkway hike that climbs through a mossy, boulder-strewn forest to two expansive rocky overlooks with sweeping views of Grandfather Mountain and the surrounding peaks. Despite its brief distance, the steady ascent and rocky footing add just enough challenge to make the panoramic summit views feel well-earned.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1 mile <br/> 30–40 min",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "otter-falls",
+    "name": "Otter Falls",
+    "url": "https://www.sevendevilsnc.gov/parks-and-recreation/page/otter-falls",
+    "type": "Banner Elk · Strenuous",
+    "mapQuery": "Otter Falls Seven Devils NC",
+    "description": "Otter Falls Trails were debuted in summer of 2015 with an observation deck built in 2017, which offers wonderful views of Otter Falls. This moderately strenuous hike starts from a trailhead parking area at 825 Skyland Drive and descends about 230 feet to scenic Otter Falls on Valley Creek.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1.2 miles <br/> 30–60 min",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "grandfather-loop-trail",
+    "name": "Grandfather Loop Trail",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/grandfather-trail-loop",
+    "type": "Grandfather / Linville · Moderate",
+    "mapQuery": "Black Rock Parking Area Grandfather Mountain NC",
+    "description": "Alpine crest hiking accessible from the Black Rock parking area inside Grandfather Mountain. Natural add-on for anyone already paying park admission and wanting real mountain scenery rather than only the bridge stop.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "1.5 miles <br/> 1–1.5 hrs",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "linville-falls-trails",
+    "name": "Linville Gorge Trail (231), Bynum Bluff Trail (241), Old NC 105 Loop",
+    "url": "https://www.alltrails.com/trail/us/north-carolina/linville-falls-trail",
+    "type": "Grandfather / Linville · Easy to Moderate",
+    "mapQuery": "Linville Falls Visitor Center NC",
+    "description": "A short but rugged loop that drops steeply into Linville Gorge before following the ridgeline back out, offering secluded river access and sweeping wilderness views. Expect a more adventurous feel than nearby trails, with rocky footing, elevation changes, and a quieter, backcountry atmosphere.",
+    "hoursLabel": "Roundtrip",
+    "hoursText": "2.6 miles <br/> 1.5 hrs",
+    "phone": "",
+    "group": "hiking",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "wildcat-lake-swimming",
+    "name": "Wildcat Lake — Banner Elk",
+    "url": "https://www.lmc.edu/community/wildcat-lake.htm",
+    "type": "White Sand Beach / Lifeguards / Free",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      },
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "mapQuery": "Wildcat Lake Banner Elk NC",
+    "description": "White sand beach, swimming pier, fishing dock, and lifeguards on duty in season. One of the simplest and safest swimming options on the list when easy access matters more than scenery alone.",
+    "hoursLabel": "Season",
+    "hoursText": "June – August <br/> Free",
+    "phone": "",
+    "group": "swimming-holes",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "elk-river-falls-swimming",
+    "name": "Elk River Falls — Elk Park",
+    "url": "https://www.bannerelk.com/attractions/elk-river-falls/",
+    "type": "Cold Deep Pool / Waterfall",
+    "mapQuery": "Elk River Falls NC",
+    "description": "A 50-foot waterfall cascading into a cold deep pool. The shallows work for supervised wading but the area immediatly around the falls features strong rip currents and is incredibly deadly.",
+    "hoursLabel": "Best use",
+    "hoursText": "Weekdays are less crowded",
+    "phone": "",
+    "group": "swimming-holes",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "boone-fork-swimming-holes",
+    "name": "Boone Fork Trail Swimming Holes — Price Park",
+    "url": "https://www.exploreboone.com/listing/hebron-falls-via-boone-fork-trail/691/",
+    "type": "Creek Pools / Natural Slides",
+    "mapQuery": "Boone Fork Trail Julian Price Park NC",
+    "description": "Multiple natural pools along Boone Fork Trail, some deep enough for stronger swimmers and some shallow enough for supervised creek play. More of a discovery along the trail than a single signed destination.",
+    "hoursLabel": "Best use",
+    "hoursText": "Combine with Boone Fork hike",
+    "phone": "",
+    "group": "swimming-holes",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "thunder-hill-overlook",
+    "name": "Thunder Hill Overlook",
+    "url": "https://blowingrock.com/mp-290-4-thunder-hill-overlook/",
+    "type": "Blue Ridge Parkway Milepost 290–291",
+    "mapQuery": "Thunder Hill Overlook Blue Ridge Parkway NC",
+    "description": "Between Boone and Blowing Rock. Large pull-off with broad sky access and an orientation that lets you see distant valley glow on the horizon under a darker sky overhead. Easy, low-effort stargazing choice.",
+    "hoursLabel": "Best use",
+    "hoursText": "Drive-up overlook",
+    "phone": "",
+    "group": "stargazing",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "top-stargazing-location-near-boone",
+    "name": "Top Stargazing Location Near Boone",
+    "url": "https://smokymountains.com/boone/blog/top-stargazing-location-near-boone-blue-ridge-after-dark-guide",
+    "type": "Areas around Boone",
+    "mapQuery": "",
+    "description": "SmokeyMountains.com list of Top 5 Stargazing Locations Near Boone",
+    "hoursText": "After Dark",
+    "phone": "",
+    "group": "stargazing",
+    "mapPlaceholder": false
+  },
+    {
+    "slug": "stargazing-on-the-blue-ridge-parkway",
+    "name": "Stargazing on the Blue Ridge Parkway",
+    "url": "https://www.blueridgeparkway.org/stories/stargazing-on-the-blue-ridge-parkway/",
+    "type": "Blue Ridge Parkway",
+    "mapQuery": "",
+    "description": "BlueRidgeParkway.com list of best stargazing locations by mile marker.",
+    "hoursText": "After Dark",
+    "phone": "",
+    "group": "stargazing",
+    "mapPlaceholder": false
+  },
+    {
+    "slug": "five-best-stargazing-spots-in-the-high-country",
+    "name": "Five Best Stargazing Spots in the High Country",
+    "url": "https://www.wataugademocrat.com/five-best-stargazing-spots-in-the-high-country/article_eb9e22d2-02b6-5ef6-a1f4-decba944d257.html",
+    "type": "High Country Area",
+    "mapQuery": "",
+    "description": "The Watauga Democrat's list of best stargazing locations.",
+    "hoursText": "After Dark",
+    "phone": "",
+    "group": "stargazing",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "bare-dark-sky-observatory-stargazing",
+    "name": "Bare Dark Sky Observatory",
+    "url": "https://www.mayland.edu/foundation/foundation-projects/earth-to-sky-park/",
+    "type": "Burnsville · ~1 hr from Boone",
+    "mapQuery": "Earth to Sky Park Burnsville NC",
+    "description": "The observatory entry in focused form: a true telescope-based night out, not just naked-eye stargazing. Saturn's rings in the eyepiece is a fundamentally different payoff than a roadside overlook.",
+    "hoursLabel": "Best use",
+    "hoursText": "Guided observatory night",
+    "phone": "(828) 470-7584",
+    "group": "stargazing",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "emerald-village-black-light-after-dark",
+    "name": "Emerald Village Black Light Mine Tour",
+    "url": "https://www.emeraldvillage.com/mines-activities/black-light-tour/",
+    "type": "July 11 · 9:30 pm · Book Now",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      },
+      {
+        "label": "Geology",
+        "class": "tag-geology"
+      }
+    ],
+    "mapQuery": "Bon Ami Mine Emerald Village Little Switzerland NC",
+    "description": "The single most unique after-dark experience in the region during this trip window: underground fluorescent minerals in the Bon Ami Mine after dark, on one of the limited seasonal Saturday night dates.",
+    "note": "Advance reservations are required; July 11 is the matching date during the trip.",
+    "hoursLabel": "Trip date",
+    "hoursText": "July 11 <br/> 9:30 pm",
+    "phone": "(828) 765-6463",
+    "group": "after-dark",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "six-pence-pub-after-dark",
+    "name": "Six Pence Pub — Blowing Rock",
+    "url": "https://www.sixpencepub.com",
+    "type": "British Pub",
+    "mapQuery": "Six Pence Pub Blowing Rock NC",
+    "description": "Pub-food, draught-beer, late-evening fallback in the heart of Blowing Rock when nobody is ready to head home yet but the night does not need to become complicated.",
+    "hoursLabel": "Late hours",
+    "hoursText": "Weeknights to 10:30 pm <br/> Fri–Sat to midnight",
+    "phone": "",
+    "group": "after-dark",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "town-tavern-after-dark",
+    "name": "Town Tavern — Blowing Rock",
+    "url": "https://www.towntavernbr.com/",
+    "type": "Live Music / Late Night",
+    "mapQuery": "Town Tavern Blowing Rock NC",
+    "description": "Large outdoor patio, regular live music on Friday and Saturday, and the most obviously social late-night gathering option in the Blowing Rock area.",
+    "hoursLabel": "Best use",
+    "hoursText": "Live-music nights",
+    "phone": "",
+    "group": "after-dark",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "kilwins",
+    "name": "Kilwins",
+    "url": "https://www.kilwins.com",
+    "type": "Fudge / Ice Cream / Caramel",
+    "price": "$",
+    "mapQuery": "Kilwins Blowing Rock NC",
+    "description": "Locations on Blowing Rock Main Street and Boone King Street. House-made fudge hand-paddled in open copper kettles in the Mackinac Island style, with strong caramel and ice cream backup.",
+    "hoursLabel": "Best use",
+    "hoursText": "Dessert stop",
+    "phone": "",
+    "group": "sweets",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "blue-deer-cookies",
+    "name": "Blue Deer Cookies",
+    "url": "https://www.bluedeercookies.com",
+    "type": "Cookies / Ice Cream Sandwiches",
+    "price": "$",
+    "mapQuery": "Blue Deer Cookies Blowing Rock NC",
+    "description": "Locations in Boone and Blowing Rock. Fresh-baked cookies paired with Homeland Creamery ice cream make the ice cream sandwich the obvious move.",
+    "hoursLabel": "Best use",
+    "hoursText": "Evening treat stop",
+    "phone": "",
+    "group": "sweets",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "be-scooped",
+    "name": "BE Scooped",
+    "url": "https://www.bescooped.com",
+    "type": "Ice Cream Parlor",
+    "price": "$",
+    "mapQuery": "BE Scooped Banner Elk NC",
+    "description": "Inside the Village Shops in downtown Banner Elk. Roughly twenty rotating flavors, fresh waffle cones, milkshakes, floats, and homemade doggy ice cream.",
+    "hoursLabel": "Best use",
+    "hoursText": "Banner Elk dessert walk",
+    "phone": "",
+    "group": "sweets",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "mast-general-store-candy-barrel",
+    "name": "Mast General Store Candy Barrel",
+    "url": "https://www.mastgeneralstore.com",
+    "type": "Old-Fashioned Candy / Ice Cream",
+    "price": "$",
+    "mapQuery": "Mast General Store Candy Barrel Valle Crucis NC",
+    "description": "Separate candy-only annex of the original Mast Store in Valle Crucis with barrel candy and a small ice cream stand by the creek in summer. Easy add-on rather than a destination by itself.",
+    "hoursLabel": "Best use",
+    "hoursText": "Pair with Mast Store visit",
+    "phone": "",
+    "group": "sweets",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "foggy-mountain-gem-mine-rainy",
+    "name": "Foggy Mountain Gem Mine",
+    "url": "https://www.foggymountaingems.com/",
+    "type": "Indoor flumes / Weather-proof",
+    "mapQuery": "Foggy Mountain Gem Mine Boone NC",
+    "description": "Indoor and outdoor flumes make this one reliably usable in mixed weather. Staff identify finds and offer on-site cutting and polishing. More family-oriented than educational, but an easy dedicated gem-mining stop.",
+    "hoursLabel": "Why it works",
+    "hoursText": "Family mining stop",
+    "phone": "(828) 963-4367",
+    "group": "rainy-day",
+    "mapUrl": "https://www.google.com/maps?q=Foggy+Mountain+Gem+Mine+Boone+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "linville-caverns-rainy",
+    "name": "Linville Caverns",
+    "url": "https://www.linvillecaverns.com/",
+    "type": "Underground / 52°F",
+    "mapQuery": "Linville Caverns NC",
+    "description": "The only natural cavern open to the public in NC. Guided 30-minute tours on paved paths through limestone formations, underground streams, and cool interior passages. Year-round temperature inside is 52°F, so bring a light layer even in July. One of the more accessible attractions on the list.",
+    "hoursLabel": "Why it works",
+    "hoursText": "Underground <br/> Constant ~52°F",
+    "phone": "(828) 756-4171",
+    "group": "rainy-day",
+    "mapUrl": "https://www.google.com/maps?q=Linville+Caverns+Marion+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "turchin-center-rainy",
+    "name": "Turchin Center for Visual Arts",
+    "url": "https://tcva.appstate.edu/",
+    "type": "Free / Air-Conditioned",
+    "tags": [
+      {
+        "label": "Free",
+        "class": "tag-free"
+      }
+    ],
+    "mapQuery": "Turchin Center for the Visual Arts Boone NC",
+    "description": "Free museum on the App State campus, with contemporary and Appalachian art across multiple galleries and rotating exhibitions. Air-conditioned and easy to pair with a King Street walk afterward.",
+    "hoursLabel": "Why it works",
+    "hoursText": "Free admission <br/> Gallery hours vary",
+    "phone": "(828) 262-3017",
+    "group": "rainy-day",
+    "mapUrl": "https://www.google.com/maps?q=Turchin+Center+for+Visual+Arts+Boone+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "mysterium-rainy",
+    "name": "Mysterium Escape Adventure",
+    "url": "https://mysteriumboone.com/",
+    "type": "Fully indoor / Book ahead",
+    "mapQuery": "Mysterium Escape Adventure Boone NC",
+    "description": "Easy rainy-day answer in Boone for a group that wants an activity rather than browsing or coffee.",
+    "hoursLabel": "Why it works",
+    "hoursText": "Fully indoor <br/> Reserve a slot",
+    "phone": "(828) 865-0009",
+    "group": "rainy-day",
+    "mapUrl": "https://www.google.com/maps?q=Mysterium+Escape+Adventure+Boone+NC",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "mast-general-store-rainy",
+    "name": "Mast General Store",
+    "url": "https://www.mastgeneralstore.com",
+    "type": "Historic store browsing",
+    "mapQuery": "Mast General Store Valle Crucis NC",
+    "description": "Historic building with enough texture and browsing potential to fill an hour without trying too hard. Better as part of a Valle Crucis rainy cluster than as a standalone drive.",
+    "hoursLabel": "Why it works",
+    "hoursText": "Indoor browsing",
+    "phone": "",
+    "group": "rainy-day",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "watauga-river-whitewater-rafting",
+    "name": "Watauga River Rafting and New River Tubing",
+    "url": "https://highmountainexpeditions.com/nc-adventures/watauga-river-rafting/",
+    "type": "River Adventure",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Wahoo's Adventures or High Mountain Expeditions both offer guided half-day rafting on the Watauga River. Class II–III rapids with dam-controlled water levels make runs relatively reliable regardless of rainfall. Equipment and guides are included. Age is 3 and up, and non-participants can wait at the outfitter base or explore nearby.",
+    "hoursLabel": "Daily (summer)",
+    "hoursText": "Advance booking required",
+    "phone": "",
+    "group": "water"
+  },
+  {
+    "slug": "new-river-tubing",
+    "name": "New River Tubing 2",
+    "url": "https://newriverjunction.com/tubing/",
+    "type": "Water / Float Trip",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      }
+    ],
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "High Mountain Expeditions offers custom high-back tubes with backrest and cup holder. The New River is gentle and scenic, making this a very different experience from rafting. Typical float length is 2–4 hours, and it works well for mixed fitness levels. Runs 10 am–4 pm daily in summer; reservations required.",
+    "hoursLabel": "Daily (summer)",
+    "hoursText": "10 am – 4 pm <br/> hmexpeditions.com <br/> Reservations required",
+    "phone": "",
+    "group": "water"
+  },
+  {
+    "slug": "fly-fishing-new-river-watauga",
+    "name": "Fly Fishing — New River / Watauga",
+    "url": "https://www.southernappalachiananglers.com/our-waters/our-rivers/watauga-river-fly-fishing-guide",
+    "type": "Fishing",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "While the active crew is on the river, dedicated anglers can fly fish independently at accessible stretches of the Watauga or New River. NC fishing license required — available at ncwildlife.org or at sporting goods stores before the trip. RiverGirl in Todd also offers a full guide service. The High Country is prime trout country with brown and rainbow trout in cold mountain streams.",
+    "hoursLabel": "Any day",
+    "hoursText": "Get NC license at <br/> ncwildlife.org first",
+    "phone": "",
+    "group": "water"
+  },
+  {
+    "slug": "holloway-corner-kitchen-boone",
+    "name": "Holloway Corner Kitchen",
+    "url": "https://www.hollowaycornerkitchen.com",
+    "type": "Breakfast / Lunch",
+    "price": "$",
+    "mapQuery": "Holloway Corner Kitchen Boone NC",
+    "description": "On NC-105. Honest homestyle breakfast and lunch — eggs, biscuits, and reliable coffee in a simple setting with a no-drama feel. Strong pre-Grandfather or southbound morning stop.",
+    "hoursLabel": "Best use",
+    "hoursText": "Breakfast or early lunch",
+    "phone": "",
+    "group": "dining--boone",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "come-back-shack",
+    "name": "Come Back Shack",
+    "url": "https://www.comebackshack.com",
+    "type": "Burgers",
+    "price": "$",
+    "mapQuery": "Come Back Shack Boone NC",
+    "description": "This place has LOTS of soy free options Sarah can eat. We're goint at least once. A converted service station in Boone that locals regularly rate among the best burgers in the area. Not glamorous, but strong at what it does and useful when the group wants something fast, local, and satisfying.",
+    "hoursLabel": "Heads up",
+    "hoursText": "Busy summer nights can mean a wait",
+    "phone": "",
+    "group": "dining--boone",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "the-local",
+    "name": "The Local",
+    "url": "https://www.thelocalboone.com",
+    "type": "Casual — Trivia Wednesdays at 10pm",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "price": "$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "179 Howard St, Boone. Family-owned, community-focused restaurant with local ingredients and NC beers. Wood-fired flats and pizzas, handhelds, bowls, trout, chicken, and more — big portions, reasonable prices, kids menu. Live music on Wednesday nights. The walls are covered with local artist photography and murals of local musical legends. A casual crowd-pleaser with something for almost everyone.",
+    "hoursLabel": "Daily",
+    "hoursText": "Lunch & dinner <br/> Live music Wed nights <br/> thelocalboone.com",
+    "phone": "",
+    "group": "dining--boone"
+  },
+  {
+    "slug": "the-social-boone",
+    "name": "The Social Boone",
+    "url": "https://www.thesocialboone.com",
+    "type": "Chef-Inspired Casual",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "price": "$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "585 W King St, downtown Boone. Sister restaurant to The Local by the same family. Chef-inspired cuisine in a warm atmosphere — creative small plates and a menu with more upscale touches than its sibling without losing the community feel. Good for the King Street area when the group wants something a step above casual but not formal.",
+    "hoursLabel": "Mon–Sun",
+    "hoursText": "11 am – 11 pm <br/> (Fri–Sat until midnight) <br/> thesocialboone.com",
+    "phone": "",
+    "group": "dining--boone"
+  },
+  {
+    "slug": "casa-rustica",
+    "name": "Casa Rustica",
+    "url": "https://casarustica1981.com/menu",
+    "type": "Italian — Casual / Family",
+    "tags": [
+      {
+        "class": "tag-family",
+        "label": "Family"
+      }
+    ],
+    "price": "$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Authentic Italian in a log cabin since 1981. Cozy, well-priced, family-friendly, and consistently good. Solid option for a relaxed group dinner in Boone. Pasta, classic Italian mains, and good bread.",
+    "hoursLabel": "Check site",
+    "hoursText": "Dinner nightly <br/> casarusticaboone.com",
+    "phone": "",
+    "group": "dining--boone"
+  },
+  {
+    "slug": "howard-station",
+    "name": "Howard Station",
+    "url": "https://www.howardstation.com/",
+    "type": "BBQ",
+    "price": "$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Reliable local barbecue option in Boone, with brisket and other casual staples in an unfussy setting. Useful when the group is already in Boone and wants something straightforward without extra driving.",
+    "hoursLabel": "Check site",
+    "hoursText": "Lunch & dinner",
+    "phone": "(828) 865-1122",
+    "group": "dining--boone"
+  },
+  {
+    "slug": "the-gamekeeper",
+    "name": "The Gamekeeper",
+    "url": "https://gamekeeper-nc.com/",
+    "type": "Fine Dining",
+    "tags": [
+      {
+        "label": "Reserve Now",
+        "class": "tag-bookasap"
+      }
+    ],
+    "price": "$$$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Shull's Mill Road, a short drive from downtown Boone toward Blowing Rock. Set in a stone cottage on a winding back road among old-growth ferns and maples. Menu features emu, bison, venison, elk, trout, duck, and boar, with a strong game-and-trout focus. One of the more distinctive dinner options in the High Country. Thursday–Sunday evenings only.",
+    "hoursLabel": "Thu–Sun",
+    "hoursText": "5 pm – close <br/> Closed Mon–Wed <br/> gamekeeperrestaurant.com",
+    "phone": "",
+    "group": "dining--boone"
+  },
+  {
+    "slug": "the-speckled-trout",
+    "name": "The Speckled Trout",
+    "url": "https://www.thespeckledtrout.com",
+    "type": "Mountain Food / Live Music",
+    "price": "$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Sarah & Ross want to eat here. It has fun Mocktails! Need a reservation and need to call for 7+. Mountain food done well, with local trout, heritage meats, and thoughtful starters. Strong beer list and good non-alcoholic options. Live music is sometimes part of the schedule.",
+    "note": "Live music schedule can affect which evening feels best.",
+    "hoursLabel": "Thursday to Monday",
+    "hoursText": "11am to 9pm",
+    "phone": "(828) 295-9819",
+    "group": "dining--blowing-rock"
+  },
+  {
+    "slug": "social-on-main",
+    "name": "Social on Main",
+    "url": "https://socialonmainbr.com/",
+    "type": "Breakfast & Brunch Only",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "price": "$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "870A Main St, right on the boutique shopping strip. Open for breakfast and lunch only. Eggs Benedict, pancakes, waffles, breakfast sandwiches, and prime rib sandwiches at lunch. Easy pairing with a Main Street morning.",
+    "hoursLabel": "Daily",
+    "hoursText": "Breakfast & lunch only <br/> Not open for dinner",
+    "phone": "",
+    "group": "dining--blowing-rock"
+  },
+  {
+    "slug": "town-tavern",
+    "name": "Town Tavern",
+    "url": "https://www.towntavernbr.com/menu",
+    "type": "Casual / Live Music",
+    "price": "$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Main Street Blowing Rock. Large outdoor patio, live music on weekends, and casual food. Comfortable mixed-group evening spot after time on Main Street.",
+    "hoursLabel": "Daily",
+    "hoursText": "Live music Fri/Sat <br/> Outdoor patio",
+    "phone": "",
+    "group": "dining--blowing-rock"
+  },
+  {
+    "slug": "six-pence-pub-blowing-rock",
+    "name": "Six Pence Pub",
+    "url": "https://www.sixpencepub.com",
+    "type": "British Pub / Late Night",
+    "price": "$$",
+    "mapQuery": "Six Pence Pub Blowing Rock NC",
+    "description": "Blowing Rock. Fourteen draught taps, real pub food, and a relaxed atmosphere that works well as a late end-of-evening stop on Main Street when no one wants to head home yet.",
+    "hoursLabel": "Late hours",
+    "hoursText": "Weeknights to 10:30 pm <br/> Fri–Sat to midnight",
+    "phone": "",
+    "group": "dining--blowing-rock",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "the-best-cellar",
+    "name": "The Best Cellar",
+    "url": "https://www.ragged-gardens.com/best-cellar-restaurant/",
+    "type": "Fine Dining",
+    "tags": [
+      {
+        "label": "Reserve in Advance",
+        "class": "tag-bookasap"
+      }
+    ],
+    "price": "$$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "203 Sunset Dr at the Inn at Ragged Gardens, established 1975. Long-standing Blowing Rock restaurant with an extensive wine list and a menu built around seafood, beef, lamb, and duck. The private wine cellar room seats up to 8. Business casual dress; valet parking. Standard listing notes no young children, so confirm policy if that matters for the group.",
+    "hoursLabel": "Thu–Mon",
+    "hoursText": "5:30 pm – close <br/> Closed Tue & Wed <br/> ragged-gardens.com",
+    "phone": "",
+    "group": "dining--blowing-rock"
+  },
+  {
+    "slug": "restaurant-at-gideon-ridge",
+    "name": "Restaurant at Gideon Ridge",
+    "url": "https://www.gideonridge.com",
+    "type": "Fine Dining",
+    "tags": [
+      {
+        "label": "Reserve 14 Days Out at 12pm",
+        "class": "tag-bookasap"
+      },
+      {
+        "label": "Ages 12+ Only — Gwen cannot attend",
+        "class": "tag-adult"
+      }
+    ],
+    "price": "$$$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "202 Gideon Ridge Rd, Blowing Rock. A 2024 and 2025 James Beard Award semifinalist for Outstanding Restaurant. Menu changes daily based on what's available from local farms. Dine al fresco on the terrace or in the intimate European-style dining room — both with long-range mountain views. Dress up (no shorts/flip flops). Reservations open exactly 14 days in advance at noon. Age restriction: 12 and older only — children under 12 cannot attend.",
+    "hoursLabel": "Tue–Sat",
+    "hoursText": "5 pm – 8 pm <br/> Closed Sun & Mon <br/> gideonridge.com",
+    "phone": "",
+    "group": "dining--blowing-rock"
+  },
+  {
+    "slug": "daingerfield-s-at-westglow",
+    "name": "Daingerfield's at Westglow",
+    "url": "https://www.westglow.com/make-a-reservation/",
+    "type": "Fine Dining",
+    "tags": [
+      {
+        "label": "Ages 14+ Only — Gwen cannot attend",
+        "class": "tag-adult"
+      }
+    ],
+    "price": "$$$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "Fine dining within Westglow Resort, with mountain views, original artwork, and a piano bar. Adults-oriented dinner option. Age restriction is 14 and older, which can make it useful for a planned adults-only evening.",
+    "hoursLabel": "Check site",
+    "hoursText": "Dinner service <br/> westglow.com",
+    "phone": "",
+    "group": "dining--blowing-rock"
+  },
+  {
+    "slug": "highlands-prohibition-kitchen",
+    "name": "Highlands Prohibition Kitchen",
+    "url": "https://www.highlandsprohibitionkitchen.com",
+    "type": "Speakeasy Fine Dining",
+    "tags": [
+      {
+        "label": "Reserve in Advance",
+        "class": "tag-bookasap"
+      }
+    ],
+    "price": "$$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "151 Shawneehaw Ave S. Speakeasy-style dining room with candlelight, jazz, leather booths, and brass fixtures. Menu includes tenderloin skewers, seared scallops with lobster bisque, and cast iron crab cakes. Open Friday–Sunday evenings only. Confirm child suitability if younger kids might be included.",
+    "hoursLabel": "Fri–Sun only",
+    "hoursText": "5 pm – 9 pm <br/> Closed Mon–Thu <br/> highlandsprohibitionkitchen.com",
+    "phone": "",
+    "group": "dining--banner-elk"
+  },
+  {
+    "slug": "lp-on-main",
+    "name": "LP on Main (Louisiana Purchase)",
+    "url": "https://louisianapurchasefoodandspirits.com/",
+    "type": "Upscale Casual",
+    "price": "$$",
+    "mapQuery": "LP on Main Banner Elk NC",
+    "description": "Long-running chef-owner institution on Main Street with Creole and Cajun influences, strong shrimp and grits, and a farm-to-table bent that keeps it feeling rooted in the region rather than gimmicky.",
+    "hoursLabel": "Best use",
+    "hoursText": "Upscale casual dinner",
+    "phone": "",
+    "group": "dining--banner-elk",
+    "mapPlaceholder": false
+  },
+  {
+    "slug": "stonewalls-restaurant",
+    "name": "Stonewalls Restaurant",
+    "url": "https://www.stonewallsrestaurant.com",
+    "type": "Steakhouse — Group Dinner Candidate",
+    "tags": [
+      {
+        "label": "Great for Gwen",
+        "class": "tag-family"
+      }
+    ],
+    "price": "$$$",
+    "mapUrl": "about:blank",
+    "mapPlaceholder": true,
+    "description": "344 Shawneehaw Ave S. Long-running Banner Elk steak and seafood restaurant serving prime rib, filet, NY strip, rib eye, ribs, seafood, and pasta. Family-friendly with no published age restriction, so it remains one of the easier nicer-dinner choices for a larger mixed-age group.",
+    "hoursLabel": "Check site",
+    "hoursText": "Dinner nightly <br/> stonewallsrestaurant.com",
+    "phone": "",
+    "group": "dining--banner-elk"
+  },
+  {
+    "slug": "artisanal",
+    "name": "Artisanal",
+    "url": "https://artisanalnc.com",
+    "type": "Fine Dining / Special Occasion",
+    "tags": [
+      {
+        "label": "Book Early",
+        "class": "tag-bookasap"
+      }
+    ],
+    "price": "$$$$",
+    "mapQuery": "Artisanal Banner Elk NC",
+    "description": "The Artisanal menu is a prix fixe menu for $105/guest plus tax and service charge. The menu is 3 courses: There are many available selections per course. This is the only available menu for all guests. For men: Collared shirts are required. Jackets are preferred but not required. No shorts, distressed jeans, hoodies, hats, or open toed shoes (sandals/flip flops). For women: Dresses and Business Casual attire are acceptable. No distressed jeans, hoodies, hats, or excessively revealing clothing.",
+    "hoursLabel": "Reservations",
+    "hoursText": "Book well in advance for July",
+    "phone": "",
+    "group": "dining--banner-elk",
+    "mapPlaceholder": false
+  },
+  {
+  "slug": "timberlakes-restaurant-at-chetola-resort",
+  "name": "Timberlake's Restaurant at Chetola Resort",
+  "url": "https://www.chetola.com/blowing-rock-restaurants",
+  "type": "Resort Dining / Special Occasion",
+  "price": "$$$",
+  "mapQuery": "Timberlake's Restaurant at Chetola Resort Blowing Rock NC",
+  "description": "On-site dining at Chetola Resort in Blowing Rock, set in the resort's historic estate setting overlooking Chetola Lake. A convenient nicer dinner option for anyone already planning time around Chetola, and also workable for breakfast, brunch, or lunch without needing to head back into town.",
+  "note": "This location may have some private areas that would be good for a 3 year old to not disturb other guests. Someone will need a call to get more info.",
+  "hoursLabel": "Current posted schedule",
+  "hoursText": "Breakfast daily 7:30 am – 10:30 am <br/> Sunday brunch 11 am – 2 pm <br/> Lunch Tue–Sat 12 pm – 2 pm <br/> Dinner Thu 5 pm – 8 pm, Fri–Sat 5 pm – 9 pm",
+  "phone": "(800) 243-8652",
+  "group": "dining--blowing-rock",
+  "mapPlaceholder": false
+  },
+  {
+  "slug": "chetola-resort-spa",
+  "name": "The Spa at Chetola Resort",
+  "url": "https://www.chetola.com/spas-in-north-carolina",
+  "type": "Spa / Relaxation",
+  "mapQuery": "The Spa at Chetola Resort Blowing Rock NC",
+  "description": "Full-service spa at Chetola Resort offering massages, facials, and body treatments in a quiet lakeside setting. A good option for a slower-paced day or to balance out more active plans, with access to resort amenities that make it easy to turn a treatment into a longer, relaxed visit.",
+  "note": "Appointments are recommended, especially for weekends.",
+  "hoursLabel": "Typical hours",
+  "hoursText": "Open daily; hours vary by appointment schedule",
+  "phone": "(828) 295-5535",
+  "group": "blowing-rock",
+  "mapPlaceholder": false
+  }
+]
+</script><script>
+(function () {
+  const PHONE_PLACEHOLDER = '';
+
+  const escapeHtml = (value) => String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+  const renderTag = (tag) => {
+    if (!tag || !tag.label) return '';
+    const extraClass = tag.class ? ` ${escapeHtml(tag.class)}` : '';
+    return `<span class="tag${extraClass}">${escapeHtml(tag.label)}</span>`;
+  };
+
+  const renderInlineBreaks = (value) => {
+    const escaped = escapeHtml(value ?? '');
+    return escaped.replace(/&lt;br\s*\/?&gt;/gi, '<br/>');
+  };
+
+  const getMapUrl = (entry) => {
+    if (entry.mapCoords) {
+      return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(entry.mapCoords)}`;
+    }
+    if (entry.mapQuery) {
+      return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(entry.mapQuery)}`;
+    }
+    if (entry.mapUrl) {
+      return entry.mapUrl;
+    }
+    return 'about:blank';
+  };
+
+  const renderLogisticsBlock = (label, value, extraClass = '') => {
+    if (!value) return '';
+    return `<span class="logistics-block${extraClass}"><span class="logistics-label">${escapeHtml(label)}</span><span class="logistics-value">${renderInlineBreaks(value)}</span></span>`;
+  };
+
+  const renderEntry = (entry) => {
+    const slug = entry.slug || 'entry';
+    const name = entry.name || 'Untitled Entry';
+    const url = entry.url || '#';
+    const type = entry.type || 'Activity';
+    const description = entry.description || 'Description TBD';
+    const hoursLabel = entry.hoursLabel || 'Hours';
+    const hoursText = entry.hoursText || 'TBD';
+    const phone = entry.phone || PHONE_PLACEHOLDER;
+    const mapUrl = getMapUrl(entry);
+    const mapPlaceholder = mapUrl === 'about:blank';
+    const mapClass = mapPlaceholder ? 'map-link is-placeholder' : 'map-link';
+    const mapAriaLabel = mapPlaceholder ? `Map destination pending for ${name}` : `Navigate to ${name}`;
+    const tags = Array.isArray(entry.tags) ? entry.tags.map(renderTag).join('') : '';
+    const price = entry.price ? `<span class="price-tag">${escapeHtml(entry.price)}</span>` : '';
+    const noteClass = entry.noteClass ? ` ${escapeHtml(entry.noteClass)}` : '';
+    const note = entry.note ? `<div class="note-callout${noteClass}">${escapeHtml(entry.note)}</div>` : '';
+    const hoursWarning = entry.hoursWarning ? `<span class="hours-warning">${escapeHtml(entry.hoursWarning)}</span>` : '';
+    const phoneHref = String(phone).replace(/[^\d+]/g, '');
+    const phoneMarkup = phone
+      ? `<span class="logistics-block entry-phone"><span class="logistics-label">Phone</span><span class="logistics-value"><a href="tel:${escapeHtml(phoneHref)}">${escapeHtml(phone)}</a></span></span>`
+      : '';
+
+    return `\n<!-- ENTRY START: ${escapeHtml(slug)} -->\n<article class="entry" id="entry-${escapeHtml(slug)}" data-entry-slug="${escapeHtml(slug)}" data-entry-name="${escapeHtml(name)}">\n  <div class="entry-left">\n    <div class="entry-name-row">\n      <div class="entry-name"><a class="entry-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(name)}</a></div>\n      <div class="entry-type">${escapeHtml(type)}</div>\n      ${tags}\n      ${price}\n      <a class="${mapClass}" href="${escapeHtml(mapUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(mapAriaLabel)}" title="${escapeHtml(mapAriaLabel)}" data-map-status="${mapPlaceholder ? 'placeholder' : 'ready'}">\n        <svg aria-hidden="true" viewBox="0 0 24 24"><use href="#icon-map-pin"></use></svg>\n      </a>\n    </div>\n    <div class="entry-desc">${renderInlineBreaks(description)}</div>\n    ${note}\n  </div>\n  <div class="entry-hours entry-logistics">${renderLogisticsBlock(hoursLabel, hoursText)}${phoneMarkup}${hoursWarning}</div>\n</article>\n<!-- ENTRY END: ${escapeHtml(slug)} -->`.trim();
+  };
+
+  let allEntries = [];
+  try {
+    const masterDataScript = document.getElementById('all-entries-data');
+    allEntries = masterDataScript ? JSON.parse(masterDataScript.textContent) : [];
+  } catch (error) {
+    console.error('Failed to parse master entry data', error);
+  }
+
+  document.querySelectorAll('.entries[data-render-mode="json"]').forEach((container) => {
+    const groupKey = container.dataset.group;
+    if (!groupKey) return;
+    try {
+      const entries = allEntries.filter((entry) => entry.group === groupKey);
+      container.innerHTML = entries.map(renderEntry).join('\n');
+      container.dataset.entryCount = String(entries.length);
+    } catch (error) {
+      container.innerHTML = '<div class="entry"><div class="entry-left"><div class="entry-desc">Entry data failed to render.</div></div></div>';
+      console.error('Failed to render entries', error);
+    }
+  });
+})();
+</script></body>
+</html>
